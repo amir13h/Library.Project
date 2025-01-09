@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+    font-family: fa;
+    src: url('/IRANSansWeb(FaNum).woff2');
+}
+* {
+    font-family: fa;
+}
+body {
+    direction: rtl;
+    background-color: #ffcccc;
+}

@@ -1,0 +1,62 @@
+@if (isMember==true) {
+    <form (ngSubmit)="onSubmitMember()"
+    class="font-sans text-gray-800 max-w-4xl mx-auto px-6 py-8 my-6 border-2 border-gray-300 rounded-lg shadow-lg bg-red-50">
+    <div class="grid gap-6">
+        <div class="relative flex flex-col sm:col-span-1">
+            <label class="text-sm mb-2">شناسه</label>
+            <input [(ngModel)]="data3.id" name="id" type="number" placeholder="شناسه را وارد کنید" disabled
+                class="px-4 py-2 bg-gray-200 w-full text-sm border border-gray-300 rounded-md focus:border-red-500 focus:ring-0 outline-none transition-transform duration-300 ease-in-out" />
+        </div>
+        <div class="relative flex flex-col sm:col-span-1">
+            <label class="text-lg mb-2">نام و نام خانوادگی</label>
+            <input [(ngModel)]="data3.name" name="name" type="text" placeholder="نام و نام خانوادگی را وارد کنید"
+            class="px-4 py-2 bg-white w-full text-sm border border-gray-300 rounded-md focus:border-red-500 focus:ring-0 outline-none transition-transform duration-300 ease-in-out transform hover:scale-105" />
+        </div>
+        <div class="relative flex flex-col sm:col-span-1">
+            <label class="text-sm mb-2">شماره همراه</label>
+            <input [(ngModel)]="data3.phone" name="phone" type="text" placeholder="شماره همراه را وارد کنید"
+                class="px-4 py-2 bg-white w-full text-sm border border-gray-300 rounded-md focus:border-red-500 focus:ring-0 outline-none transition-transform duration-300 ease-in-out transform hover:scale-105" />
+        </div>
+        <div class="relative flex flex-col sm:col-span-1">
+            <label class="text-sm mb-2">سن</label>
+            <input [(ngModel)]="data3.age" name="age" type="number" placeholder="سن را وارد کنید"
+                class="px-4 py-2 bg-white w-full text-sm border border-gray-300 rounded-md focus:border-red-500 focus:ring-0 outline-none transition-transform duration-300 ease-in-out transform hover:scale-105" />
+        </div>
+    </div>
+    <button [disabled]="!data3.name || !data3.phone || !data3.age || !data3.id" type="submit"
+        class="disabled:bg-red-300 disabled:cursor-not-allowed mt-6 px-4 py-2 w-full rounded-md text-sm bg-red-400 hover:bg-red-500 text-white outline-none transition-transform duration-300 ease-in-out transform">ارسال</button>
+    <button type="button" (click)="goBackMember()"
+        class="mt-4 px-4 py-2 w-full rounded-md text-sm bg-gray-300 hover:bg-gray-400 text-gray-800 outline-none transition-transform duration-300 ease-in-out transform">بازگشت</button>
+</form>
+}
+@if (isMember==false) {
+    <form (ngSubmit)="onSubmitBook()"
+    class="font-sans text-gray-800 max-w-4xl mx-auto px-6 py-8 my-6 border-2 border-gray-300 rounded-lg shadow-lg bg-red-50">
+    <div class="grid gap-6">
+        <div class="relative flex flex-col sm:col-span-1">
+            <label class="text-sm mb-2">شناسه</label>
+            <input [(ngModel)]="data4.id" name="id" type="number" placeholder="شناسه را وارد کنید" disabled
+                class="px-4 py-2 bg-gray-200 w-full text-sm border border-gray-300 rounded-md focus:border-red-500 focus:ring-0 outline-none transition-transform duration-300 ease-in-out" />
+        </div>
+        <div class="relative flex flex-col sm:col-span-1">
+            <label class="text-lg mb-2">نام کتاب</label>
+            <input [(ngModel)]="data4.title" name="title" type="text" placeholder="نام کتاب را وارد کنید"
+            class="px-4 py-2 bg-white w-full text-sm border border-gray-300 rounded-md focus:border-red-500 focus:ring-0 outline-none transition-transform duration-300 ease-in-out transform hover:scale-105" />
+        </div>
+        <div class="relative flex flex-col sm:col-span-1">
+            <label class="text-sm mb-2">قیمت</label>
+            <input [(ngModel)]="data4.price" name="price" type="number" placeholder="قیمت را وارد کنید"
+                class="px-4 py-2 bg-white w-full text-sm border border-gray-300 rounded-md focus:border-red-500 focus:ring-0 outline-none transition-transform duration-300 ease-in-out transform hover:scale-105" />
+        </div>
+        <div class="relative flex flex-col sm:col-span-1">
+            <label class="text-sm mb-2">تعداد صفحات</label>
+            <input [(ngModel)]="data4.pages" name="pages" type="number" placeholder="تعداد صفحات را وارد کنید"
+                class="px-4 py-2 bg-white w-full text-sm border border-gray-300 rounded-md focus:border-red-500 focus:ring-0 outline-none transition-transform duration-300 ease-in-out transform hover:scale-105" />
+        </div>
+    </div>
+    <button [disabled]="!data4.title || !data4.price || !data4.pages || !data4.id" type="submit"
+        class="disabled:bg-red-300 disabled:cursor-not-allowed mt-6 px-4 py-2 w-full rounded-md text-sm bg-red-400 hover:bg-red-500 text-white outline-none transition-transform duration-300 ease-in-out transform">ارسال</button>
+    <button type="button" (click)="goBackBook()"
+        class="mt-4 px-4 py-2 w-full rounded-md text-sm bg-gray-300 hover:bg-gray-400 text-gray-800 outline-none transition-transform duration-300 ease-in-out transform">بازگشت</button>
+</form>
+}

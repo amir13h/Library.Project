@@ -1,0 +1,15 @@
+<div class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+    <div class="bg-red-50 shadow-[0_4px_12px_-5px_rgba(0,0,0,0.4)] w-full max-w-lg rounded-lg font-[sans-serif] overflow-hidden mx-auto">
+        <div class="p-8">
+            <h3 class="text-xl font-semibold text-red-600">هشدار</h3>
+            <p class="mt-4 text-md text-gray-700 leading-relaxed">شما در حال پاک کردن یک داده هستید.</p>
+            <p class="text-md text-red-600 leading-relaxed">هشدار: این عمل قابل برگشت نیست.</p>
+            <div class="mt-6 flex justify-end space-x-4">
+                <button routerLink="/home" type="button"
+                   (click)="okRemove()"  class="px-5 py-2.5 rounded-lg text-white text-sm tracking-wider border-none outline-none bg-red-500 hover:bg-red-600">تایید</button>
+                <button type="button"
+                   (click)="cancel()"  class="px-5 py-2.5 rounded-lg text-gray-700 text-sm tracking-wider border border-gray-300 outline-none bg-white hover:bg-gray-100">لغو</button>
+            </div>
+        </div>
+    </div>
+</div>
